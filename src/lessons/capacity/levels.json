@@ -1,0 +1,247 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Màn 1: Làm đầy bình 5 lít",
+      "description": "Bình 2L đầy, bình 3L đầy, bình 5L đang rỗng.",
+      "instruction": "Hãy đổ nước từ hai bình nhỏ để làm đầy bình 5 lít!",
+      "tools": {
+        "tap": false,
+        "sink": false
+      },
+      "vessels": [
+        {
+          "id": "vessel_2l",
+          "name": "Bình 2L",
+          "capacity": 2,
+          "initialLevel": 2,
+          "color": "#FF70A6"
+        },
+        {
+          "id": "vessel_3l",
+          "name": "Bình 3L",
+          "capacity": 3,
+          "initialLevel": 3,
+          "color": "#FF9770"
+        },
+        {
+          "id": "vessel_5l",
+          "name": "Bình 5L",
+          "capacity": 5,
+          "initialLevel": 0,
+          "color": "#70D6FF"
+        }
+      ],
+      "goal": {
+        "type": "exact",
+        "vesselId": "vessel_5l",
+        "targetLevel": 5,
+        "description": "Bình 5L có đúng 5 lít nước (đầy bình)"
+      },
+      "minMoves": 2,
+      "optimalMoves": [
+        { "type": "pour", "from": "vessel_2l", "to": "vessel_5l" },
+        { "type": "pour", "from": "vessel_3l", "to": "vessel_5l" }
+      ],
+      "hintSteps": [
+        "Đổ hết nước từ bình 2L sang bình 5L.",
+        "Tiếp tục đổ hết nước từ bình 3L sang bình 5L."
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Màn 2: Đong đúng 2 lít vào bình 5L",
+      "description": "Bình 2L đang đầy nước, bình 5L đang rỗng.",
+      "instruction": "Làm sao để bình 5 lít có đúng 2 lít nước?",
+      "tools": {
+        "tap": false,
+        "sink": false
+      },
+      "vessels": [
+        {
+          "id": "vessel_2l",
+          "name": "Bình 2L",
+          "capacity": 2,
+          "initialLevel": 2,
+          "color": "#FF70A6"
+        },
+        {
+          "id": "vessel_3l",
+          "name": "Bình 3L",
+          "capacity": 3,
+          "initialLevel": 0,
+          "color": "#FF9770"
+        },
+        {
+          "id": "vessel_5l",
+          "name": "Bình 5L",
+          "capacity": 5,
+          "initialLevel": 0,
+          "color": "#70D6FF"
+        }
+      ],
+      "goal": {
+        "type": "exact",
+        "vesselId": "vessel_5l",
+        "targetLevel": 2,
+        "description": "Bình 5L có đúng 2 lít nước"
+      },
+      "minMoves": 1,
+      "optimalMoves": [
+        { "type": "pour", "from": "vessel_2l", "to": "vessel_5l" }
+      ],
+      "hintSteps": [
+        "Chỉ cần nghiêng đổ bình 2L sang bình 5L là xong ngay!"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Màn 3: Dùng vòi nước lấy đúng 4 lít",
+      "description": "Có vòi nước cấp. Cả 3 bình ban đầu đều rỗng.",
+      "instruction": "Dùng vòi nước để đong đúng 4 lít vào bình 5 lít!",
+      "tools": {
+        "tap": true,
+        "sink": false
+      },
+      "vessels": [
+        {
+          "id": "vessel_2l",
+          "name": "Bình 2L",
+          "capacity": 2,
+          "initialLevel": 0,
+          "color": "#FF70A6"
+        },
+        {
+          "id": "vessel_3l",
+          "name": "Bình 3L",
+          "capacity": 3,
+          "initialLevel": 0,
+          "color": "#FF9770"
+        },
+        {
+          "id": "vessel_5l",
+          "name": "Bình 5L",
+          "capacity": 5,
+          "initialLevel": 0,
+          "color": "#70D6FF"
+        }
+      ],
+      "goal": {
+        "type": "exact",
+        "vesselId": "vessel_5l",
+        "targetLevel": 4,
+        "description": "Bình 5L có đúng 4 lít nước"
+      },
+      "minMoves": 4,
+      "optimalMoves": [
+        { "type": "fill", "vessel": "vessel_2l" },
+        { "type": "pour", "from": "vessel_2l", "to": "vessel_5l" },
+        { "type": "fill", "vessel": "vessel_2l" },
+        { "type": "pour", "from": "vessel_2l", "to": "vessel_5l" }
+      ],
+      "hintSteps": [
+        "Mở vòi đổ đầy bình 2L.",
+        "Đổ bình 2L sang bình 5L (bình 5L có 2L).",
+        "Mở vòi lấy thêm 1 lần đầy bình 2L nữa.",
+        "Đổ tiếp bình 2L sang bình 5L để có đủ 4L (2L + 2L = 4L)!"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Màn 4: Tạo ra đúng 1 lít nước",
+      "description": "Có vòi nước cấp. Tìm cách để có đúng 1 lít nước ở bất kỳ bình nào.",
+      "instruction": "Khéo léo rót qua lại để thu được đúng 1 lít nước nhé!",
+      "tools": {
+        "tap": true,
+        "sink": false
+      },
+      "vessels": [
+        {
+          "id": "vessel_2l",
+          "name": "Bình 2L",
+          "capacity": 2,
+          "initialLevel": 0,
+          "color": "#FF70A6"
+        },
+        {
+          "id": "vessel_3l",
+          "name": "Bình 3L",
+          "capacity": 3,
+          "initialLevel": 0,
+          "color": "#FF9770"
+        },
+        {
+          "id": "vessel_5l",
+          "name": "Bình 5L",
+          "capacity": 5,
+          "initialLevel": 0,
+          "color": "#70D6FF"
+        }
+      ],
+      "goal": {
+        "type": "any",
+        "targetLevel": 1,
+        "description": "Có ít nhất một bình chứa đúng 1 lít nước"
+      },
+      "minMoves": 2,
+      "optimalMoves": [
+        { "type": "fill", "vessel": "vessel_3l" },
+        { "type": "pour", "from": "vessel_3l", "to": "vessel_2l" }
+      ],
+      "hintSteps": [
+        "Mở vòi đổ đầy bình 3L.",
+        "Đổ từ bình 3L sang bình 2L cho đến khi bình 2L đầy. Trong bình 3L sẽ còn lại đúng 1L (3L - 2L = 1L)!"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Màn 5: Thử thách đong 1 lít vào bình 5L",
+      "description": "Có vòi nước và cống thoát xả nước. Mục tiêu: Bình 5L có đúng 1 lít.",
+      "instruction": "Thử thách đỉnh cao: Đong đúng 1 lít nước vào bình 5L lớn nhất!",
+      "tools": {
+        "tap": true,
+        "sink": true
+      },
+      "vessels": [
+        {
+          "id": "vessel_2l",
+          "name": "Bình 2L",
+          "capacity": 2,
+          "initialLevel": 0,
+          "color": "#FF70A6"
+        },
+        {
+          "id": "vessel_3l",
+          "name": "Bình 3L",
+          "capacity": 3,
+          "initialLevel": 0,
+          "color": "#FF9770"
+        },
+        {
+          "id": "vessel_5l",
+          "name": "Bình 5L",
+          "capacity": 5,
+          "initialLevel": 0,
+          "color": "#70D6FF"
+        }
+      ],
+      "goal": {
+        "type": "exact",
+        "vesselId": "vessel_5l",
+        "targetLevel": 1,
+        "description": "Bình 5L có đúng 1 lít nước"
+      },
+      "minMoves": 3,
+      "optimalMoves": [
+        { "type": "fill", "vessel": "vessel_3l" },
+        { "type": "pour", "from": "vessel_3l", "to": "vessel_2l" },
+        { "type": "pour", "from": "vessel_3l", "to": "vessel_5l" }
+      ],
+      "hintSteps": [
+        "Mở vòi lấy đầy nước bình 3L.",
+        "Đổ từ bình 3L sang bình 2L cho đến khi đầy, bình 3L còn lại đúng 1L.",
+        "Đổ 1L nước còn lại trong bình 3L sang bình 5L!"
+      ]
+    }
+  ]
+}

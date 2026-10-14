@@ -1,0 +1,270 @@
+{
+  "catalog": {
+    "bottle_1l": {
+      "id": "bottle_1l",
+      "name": "Chai nhỏ",
+      "capacity": 1,
+      "height": 160,
+      "width": 50,
+      "shape": "bottle",
+      "color": "#4CC9F0",
+      "label": "Chai 1 lít",
+      "description": "Chai thuỷ tinh cao thon, đựng được 1 lít nước."
+    },
+    "vase_2l": {
+      "id": "vase_2l",
+      "name": "Bình hoa",
+      "capacity": 2,
+      "height": 140,
+      "width": 75,
+      "shape": "vase",
+      "color": "#F72585",
+      "label": "Bình hoa 2 lít",
+      "description": "Bình cắm hoa gốm sứ xinh xắn, đựng được 2 lít nước."
+    },
+    "tall_bottle_2l": {
+      "id": "tall_bottle_2l",
+      "name": "Bình thể thao cao",
+      "capacity": 2,
+      "height": 185,
+      "width": 55,
+      "shape": "bottle",
+      "color": "#4895EF",
+      "label": "Bình thể thao 2 lít",
+      "description": "Bình nước dáng rất cao và thon, đựng được 2 lít nước."
+    },
+    "teapot_3l": {
+      "id": "teapot_3l",
+      "name": "Ấm nước",
+      "capacity": 3,
+      "height": 120,
+      "width": 105,
+      "shape": "teapot",
+      "color": "#7209B7",
+      "label": "Ấm nước 3 lít",
+      "description": "Ấm đun nước đáy tròn phình to, đựng được 3 lít nước."
+    },
+    "wide_pot_3l": {
+      "id": "wide_pot_3l",
+      "name": "Nồi thấp miệng rộng",
+      "capacity": 3,
+      "height": 95,
+      "width": 130,
+      "shape": "teapot",
+      "color": "#F3722C",
+      "label": "Nồi rộng 3 lít",
+      "description": "Chiếc nồi thấp nhưng lòng nồi rất rộng, đựng được 3 lít nước."
+    },
+    "bucket_small_4l": {
+      "id": "bucket_small_4l",
+      "name": "Xô nhỏ",
+      "capacity": 4,
+      "height": 150,
+      "width": 100,
+      "shape": "bucket_small",
+      "color": "#3A0CA3",
+      "label": "Xô nhỏ 4 lít",
+      "description": "Xô nhựa vừa có quai xách, đựng được 4 lít nước."
+    },
+    "bucket_large_5l": {
+      "id": "bucket_large_5l",
+      "name": "Xô lớn",
+      "capacity": 5,
+      "height": 170,
+      "width": 125,
+      "shape": "bucket_large",
+      "color": "#4361EE",
+      "label": "Xô lớn 5 lít",
+      "description": "Xô nhựa to đựng nước sinh hoạt, đựng được 5 lít nước."
+    }
+  },
+  "rounds": [
+    {
+      "id": "round-1",
+      "roundNumber": 1,
+      "title": "Lượt 1: So sánh Chai nhỏ và Ấm nước",
+      "instruction": "Hãy quan sát và dự đoán xem chai nhỏ hay ấm nước đựng được nhiều hơn?",
+      "items": [
+        {
+          "id": "bottle_1l",
+          "name": "Chai nhỏ",
+          "capacity": 1,
+          "height": 160,
+          "width": 50,
+          "shape": "bottle",
+          "color": "#4CC9F0",
+          "label": "Chai nhỏ",
+          "description": "Chai nhỏ thon cao"
+        },
+        {
+          "id": "teapot_3l",
+          "name": "Ấm nước",
+          "capacity": 3,
+          "height": 120,
+          "width": 105,
+          "shape": "teapot",
+          "color": "#7209B7",
+          "label": "Ấm nước",
+          "description": "Ấm nước bụng tròn"
+        }
+      ],
+      "focusPair": ["bottle_1l", "teapot_3l"],
+      "misleadingAspect": "obvious",
+      "biHint": "Chai nhỏ trông cao nhưng thon, ấm nước thấp hơn nhưng bụng tròn xoe đấy!"
+    },
+    {
+      "id": "round-2",
+      "roundNumber": 2,
+      "title": "Lượt 2: Thử thách chiều cao đánh lừa!",
+      "instruction": "Bình thể thao cao hơn hẳn ấm nước, liệu có đựng được nhiều hơn không?",
+      "items": [
+        {
+          "id": "tall_bottle_2l",
+          "name": "Bình thể thao cao",
+          "capacity": 2,
+          "height": 185,
+          "width": 55,
+          "shape": "bottle",
+          "color": "#4895EF",
+          "label": "Bình cao",
+          "description": "Dáng rất cao nhưng hẹp"
+        },
+        {
+          "id": "teapot_3l",
+          "name": "Ấm nước",
+          "capacity": 3,
+          "height": 120,
+          "width": 105,
+          "shape": "teapot",
+          "color": "#7209B7",
+          "label": "Ấm nước",
+          "description": "Thấp hơn nhưng phình rộng"
+        }
+      ],
+      "focusPair": ["tall_bottle_2l", "teapot_3l"],
+      "misleadingAspect": "height_vs_width",
+      "biHint": "Đừng vội nhìn chiều cao nhé! Bình nào phình to bề ngang thường chứa được nhiều nước hơn đấy!"
+    },
+    {
+      "id": "round-3",
+      "roundNumber": 3,
+      "title": "Lượt 3: Xếp hạng ba đồ vật",
+      "instruction": "Hãy chọn đồ vật đựng được NHIỀU NƯỚC NHẤT trong ba đồ vật dưới đây!",
+      "items": [
+        {
+          "id": "bottle_1l",
+          "name": "Chai nhỏ",
+          "capacity": 1,
+          "height": 160,
+          "width": 50,
+          "shape": "bottle",
+          "color": "#4CC9F0",
+          "label": "Chai 1L",
+          "description": "1 lít"
+        },
+        {
+          "id": "vase_2l",
+          "name": "Bình hoa",
+          "capacity": 2,
+          "height": 140,
+          "width": 75,
+          "shape": "vase",
+          "color": "#F72585",
+          "label": "Bình hoa 2L",
+          "description": "2 lít"
+        },
+        {
+          "id": "teapot_3l",
+          "name": "Ấm nước",
+          "capacity": 3,
+          "height": 120,
+          "width": 105,
+          "shape": "teapot",
+          "color": "#7209B7",
+          "label": "Ấm nước 3L",
+          "description": "3 lít"
+        }
+      ],
+      "focusPair": ["vase_2l", "teapot_3l"],
+      "misleadingAspect": "different_shapes",
+      "biHint": "Cả ba đồ vật đều có hình dáng rất khác nhau. Đố bạn ấm nước hay bình hoa đựng nhiều hơn?"
+    },
+    {
+      "id": "round-4",
+      "roundNumber": 4,
+      "title": "Lượt 4: Nồi rộng miệng và Xô nhỏ",
+      "instruction": "Một chiếc nồi thấp bè và một chiếc xô cao, cái nào đựng nhiều hơn?",
+      "items": [
+        {
+          "id": "wide_pot_3l",
+          "name": "Nồi rộng miệng",
+          "capacity": 3,
+          "height": 95,
+          "width": 130,
+          "shape": "teapot",
+          "color": "#F3722C",
+          "label": "Nồi rộng",
+          "description": "Thấp nhưng rất rộng"
+        },
+        {
+          "id": "bucket_small_4l",
+          "name": "Xô nhỏ",
+          "capacity": 4,
+          "height": 150,
+          "width": 100,
+          "shape": "bucket_small",
+          "color": "#3A0CA3",
+          "label": "Xô nhỏ",
+          "description": "Cao và dáng đứng"
+        }
+      ],
+      "focusPair": ["wide_pot_3l", "bucket_small_4l"],
+      "misleadingAspect": "height_vs_width",
+      "biHint": "Nồi thấp nhưng lòng rất rộng. Hãy thử đổ sang xô xem có đầy xô không nào!"
+    },
+    {
+      "id": "round-5",
+      "roundNumber": 5,
+      "title": "Lượt 5: Đọ sức hai chiếc xô",
+      "instruction": "Hai chiếc xô xanh với kích thước gần nhau, cái nào chứa được nhiều nhất?",
+      "items": [
+        {
+          "id": "vase_2l",
+          "name": "Bình hoa",
+          "capacity": 2,
+          "height": 140,
+          "width": 75,
+          "shape": "vase",
+          "color": "#F72585",
+          "label": "Bình hoa 2L",
+          "description": "Bình hoa gốm"
+        },
+        {
+          "id": "bucket_small_4l",
+          "name": "Xô nhỏ",
+          "capacity": 4,
+          "height": 150,
+          "width": 100,
+          "shape": "bucket_small",
+          "color": "#3A0CA3",
+          "label": "Xô nhỏ 4L",
+          "description": "Xô xanh đậm 4L"
+        },
+        {
+          "id": "bucket_large_5l",
+          "name": "Xô lớn",
+          "capacity": 5,
+          "height": 170,
+          "width": 125,
+          "shape": "bucket_large",
+          "color": "#4361EE",
+          "label": "Xô lớn 5L",
+          "description": "Xô xanh dương 5L"
+        }
+      ],
+      "focusPair": ["bucket_small_4l", "bucket_large_5l"],
+      "misleadingAspect": "different_shapes",
+      "biHint": "Xô nhỏ 4L đổ sang xô lớn 5L sẽ còn thiếu một chút đấy! Đo bằng cốc đong để biết chính xác nhé!"
+    }
+  ]
+}

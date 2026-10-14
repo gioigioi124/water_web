@@ -1,0 +1,43 @@
+{
+  "id": "capacity",
+  "title": "Dung tích",
+  "subtitle": "Khám phá sức chứa và đong nước bằng lít",
+  "icon": "assets/water-drop.svg",
+  "unit": "lít",
+  "unitAbbr": "L",
+  "allowDecimals": false,
+  "targetGrade": 2,
+  "description": "Bài học tương tác trực quan về dung tích dành cho học sinh lớp 2, giúp các em so sánh sức chứa và giải bài toán đong nước số nguyên lít.",
+  "activities": [
+    {
+      "id": "partA-predict",
+      "type": "predict-rank",
+      "title": "Bước 1: Dự đoán sức chứa",
+      "dataFile": "items.json"
+    },
+    {
+      "id": "partA-pour",
+      "type": "pour-compare",
+      "title": "Bước 2: Đổ qua lại đối chiếu",
+      "dataFile": "items.json"
+    },
+    {
+      "id": "partA-measure",
+      "type": "measure",
+      "title": "Bước 3: Đo bằng cốc đong có vạch",
+      "dataFile": "items.json"
+    },
+    {
+      "id": "partB-explore",
+      "type": "explore",
+      "title": "Khám phá tự do",
+      "dataFile": "levels.json"
+    },
+    {
+      "id": "partB-puzzle",
+      "type": "goal-puzzle",
+      "title": "Thử thách đong nước",
+      "dataFile": "levels.json"
+    }
+  ]
+}

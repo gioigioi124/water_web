@@ -173,11 +173,11 @@ function renderApp() {
     currentInteractionManager = null;
   }
 
-  // Top fixed toolbar
+  // Top toolbar (Non-fixed, mobile responsive)
   const toolbarHtml = `
     <header class="top-toolbar">
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <button id="btn-home" class="btn-big btn-accent btn-circle" title="${text.toolbar.homeTitle}">
+      <div class="toolbar-brand">
+        <button id="btn-home" class="btn-big btn-toolbar btn-accent btn-circle" title="${text.toolbar.homeTitle}">
           🏠
         </button>
         <span class="font-title toolbar-title">
@@ -185,18 +185,21 @@ function renderApp() {
         </span>
       </div>
 
-      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-        <button id="btn-reset" class="btn-big btn-secondary" title="${text.toolbar.resetTitle}">
-          🔄 ${text.common.restart}
+      <div class="toolbar-actions">
+        <button id="btn-reset" class="btn-big btn-toolbar btn-secondary" title="${text.toolbar.resetTitle}">
+          <span>🔄</span>
+          <span class="btn-label">${text.common.restart}</span>
         </button>
-        <button id="btn-toggle-liters" class="btn-big btn-primary" title="${text.toolbar.toggleLitersTitle}">
-          ${settings.showLiters ? '👁️ Hiện số lít' : '🙈 Ẩn số lít'}
+        <button id="btn-toggle-liters" class="btn-big btn-toolbar btn-primary" title="${text.toolbar.toggleLitersTitle}">
+          <span>${settings.showLiters ? '👁️' : '🙈'}</span>
+          <span class="btn-label">${settings.showLiters ? 'Hiện số lít' : 'Ẩn số lít'}</span>
         </button>
-        <button id="btn-sound" class="btn-big btn-accent btn-circle" title="${text.toolbar.soundTitle}">
+        <button id="btn-sound" class="btn-big btn-toolbar btn-accent btn-circle" title="${text.toolbar.soundTitle}">
           ${settings.soundEnabled ? '🔊' : '🔇'}
         </button>
-        <button id="btn-teacher-guide" class="btn-big btn-primary" style="font-size: 16px; padding: 10px 18px;" title="${text.toolbar.teacherGuideTitle}">
-          👩‍🏫 ${text.home.forTeachers}
+        <button id="btn-teacher-guide" class="btn-big btn-toolbar btn-primary btn-teacher" title="${text.toolbar.teacherGuideTitle}">
+          <span>👩‍🏫</span>
+          <span class="btn-label">${text.home.forTeachers}</span>
         </button>
       </div>
     </header>

@@ -109,7 +109,7 @@ button:active {
   padding: 0;
 }
 
-/* Top toolbar */
+/* Top toolbar (Non-fixed, naturally scrolling with content) */
 .top-toolbar {
   display: flex;
   align-items: center;
@@ -118,16 +118,59 @@ button:active {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 3px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: relative; /* Không cố định (bỏ sticky/fixed) để tối ưu không gian hiển thị */
+  z-index: 50;
   box-shadow: 0 4px 15px var(--color-shadow);
+  gap: 12px;
+}
+
+.toolbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .toolbar-title {
   font-size: 24px;
   color: var(--color-text);
   font-weight: 800;
+  line-height: 1.2;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Toolbar button styling */
+.btn-toolbar {
+  min-height: 48px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 0 var(--color-shadow-bold), 0 6px 14px var(--color-shadow);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.1s ease, filter 0.15s ease;
+  user-select: none;
+}
+
+.btn-toolbar:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--color-shadow-bold);
+}
+
+.btn-toolbar.btn-circle {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
 }
 
 /* Mascot Bi Styles */
@@ -503,6 +546,101 @@ button:active {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   Responsive & Mobile-Friendly Styles
+   ========================================== */
+@media (max-width: 768px) {
+  .top-toolbar {
+    padding: 10px 14px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .toolbar-brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .toolbar-title {
+    font-size: 20px;
+  }
+
+  .toolbar-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-toolbar {
+    min-height: 44px;
+    padding: 6px 12px;
+    font-size: 15px;
+    flex: 1 1 auto;
+  }
+
+  .btn-toolbar.btn-circle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+  }
+
+  /* Compact mascot container on mobile */
+  .bi-container {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .bi-speech-bubble {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .top-toolbar {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .toolbar-brand {
+    gap: 8px;
+  }
+
+  .toolbar-title {
+    font-size: 18px;
+  }
+
+  .toolbar-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .btn-toolbar {
+    min-height: 42px;
+    padding: 6px 8px;
+    font-size: 14px;
+    gap: 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .btn-toolbar.btn-circle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 17px;
+  }
+
+  .btn-teacher {
+    width: 100%;
+    margin-top: 2px;
   }
 }
 
